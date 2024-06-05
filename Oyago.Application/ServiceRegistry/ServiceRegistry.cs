@@ -12,6 +12,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Oyago.Domain.Entities;
+using Oyago.Application.Interfaces;
+using Oyago.Application.Implementations;
 
 namespace Oyago.Application.ServiceRegistry
 {
@@ -26,6 +28,11 @@ namespace Oyago.Application.ServiceRegistry
             services.AddIdentity<ApplicationUser, ApplicationRole>().AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
             services.AddScoped<UserManager<ApplicationUser>>();
+            services.AddScoped<IPerformanceService, PerformanceService>();
+            services.AddScoped<IMatchingRouteService, MatchingRouteService>();
+            services.AddScoped<IRouteChoiceService, RouteChoiceService>();
+            services.AddScoped<IRouteShareService, RouteShareService>();
+            services.AddScoped<IUserService, UserService>();
             //services.AddScoped<IAuthService, AuthService>();
             //services.AddScoped<IClientService, ClientService>();
             //services.AddScoped<IBankService, BankService>();

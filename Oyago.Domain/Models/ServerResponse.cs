@@ -14,6 +14,7 @@ namespace Oyago.Domain.Models
             IsSuccessful = success;
         }
         public bool IsSuccessful { get; set; }
+        public string Message { get; set; }
         public ErrorResponse ErrorResponse { get; set; }
         public T Data { get; set; }
     }

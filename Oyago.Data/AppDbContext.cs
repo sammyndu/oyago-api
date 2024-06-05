@@ -20,6 +20,12 @@ namespace Oyago.Data
 
         }
 
+        public DbSet<RouteShare> RouteShare { get; set; }
+        public DbSet<MatchingRoute> MatchingRoute { get; set; }
+        public DbSet<RouteChoice> RouteChoice { get; set; }
+        public DbSet<Performance> Performance { get; set; }
+        public DbSet<AssignRoute> AssignRoute { get; set; }
+             
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

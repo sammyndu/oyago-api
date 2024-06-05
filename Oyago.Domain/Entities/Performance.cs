@@ -12,14 +12,16 @@ namespace Oyago.Domain.Entities
         [Key]
         public long Id { get; set; }
 
-        public int ServiceRating { get; set; } = 0;
-        public int LoadingPointRating { get; set; } = 0;
-        public int PriceRating { get; set; } = 0;
-        public int SuspiciousRating { get; set; } = 0;
-        public int VehicleIdRating { get; set; } = 0;
-        public int DriverIdRating { get; set; } = 0;
+        public decimal ServiceRating { get; set; } = 0;
+        public decimal LoadingPointRating { get; set; } = 0;
+        public decimal PriceRating { get; set; } = 0;
+        public decimal SuspiciousRating { get; set; } = 0;
+        public decimal VehicleIdRating { get; set; } = 0;
+        public decimal DriverIdRating { get; set; } = 0;
         public string? RouteType { get; set; }
-        public string UserId {  get; set; }
+        public int NoOfRatings {  get; set; } = 0;
+        public string Username {  get; set; }
         public DateTime DateCreated { get; set;}
+        public DateTime DateUpdated { get; set; }
     }
 }

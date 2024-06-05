@@ -24,8 +24,11 @@ namespace Oyago.Domain.Entities
         public decimal? SecondPrice { get; set;}
         public int CurrentTotalSeat {  get; set; }
 
+        public bool IsPaid { get; set; }
+
         public DateTime DateCreated { get; set; }
-        public string UserId { get;set; }
+        public DateTime DateUpdated { get; set; }
+        public string Username { get;set; }
         public string? RouteCode { get; set; }
 
     }
